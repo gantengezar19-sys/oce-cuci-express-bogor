@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCE Cuci Express</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon / Logo -->
+  <link rel="icon" href="oce-logo.png">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#f6fbff;color:#222;scroll-behavior:smooth}
+
+    header{
+      position:fixed;top:0;left:0;width:100%;
+      background:#0ea5e9;color:white;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 40px;z-index:999;
+      box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    header img{height:52px}
+
+    nav a{color:white;text-decoration:none;margin-left:25px;font-weight:500;transition:.3s}
+    nav a:hover{opacity:.7}
+
+    section{
+      min-height:100vh;padding:120px 10% 80px;
+      display:flex;flex-direction:column;justify-content:center;
+      opacity:0;transform:translateY(40px);
+      transition:all .9s ease;
+    }
+    section.show{opacity:1;transform:translateY(0)}
+
+    .hero{
+      background:linear-gradient(120deg,#0ea5e9,#38bdf8);
+      color:white;text-align:center
+    }
+
+    .hero img{
+      width:120px;margin-bottom:20px;
+      filter:drop-shadow(0 10px 20px rgba(0,0,0,.25));
+    }
+
+    .hero h1{font-size:48px;margin-bottom:15px}
+    .hero p{font-size:18px;opacity:.9}
+
+    .btn{
+      display:inline-block;margin-top:25px;
+      background:white;color:#0ea5e9;
+      padding:12px 26px;border-radius:40px;
+      text-decoration:none;font-weight:600;
+      transition:.3s
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.15)}
+
+    h2{font-size:34px;margin-bottom:25px;color:#0ea5e9}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+
+    .card{
+      background:white;padding:22px;border-radius:18px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.06);
+      transition:.3s
+    }
+    .card:hover{transform:translateY(-6px)}
+
+    .price li{margin:10px 0}
+
+    footer{
+      background:#0ea5e9;color:white;text-align:center;
+      padding:40px 10%
+    }
+
+    footer img{
+      width:90px;margin-bottom:15px;
+      opacity:.95
+    }
+
+    /* Floating WA */
+    .float{
+      position:fixed;bottom:25px;right:25px;
+      background:#22c55e;color:white;
+      padding:16px 18px;border-radius:50px;
+      font-weight:600;text-decoration:none;
+      box-shadow:0 10px 25px rgba(0,0,0,.2);
+      z-index:999
+    }
+    .float:hover{transform:scale(1.05)}
+
+    @media(max-width:768px){
+      .hero h1{font-size:36px}
+      header{padding:14px 20px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- LOGO -->
+  <img src="oce-logo.png" alt="Logo OCE Cuci Express">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">Tentang</a>
+    <a href="#price">Harga</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
+
+<section id="home" class="hero show">
+  <!-- Logo besar di hero -->
+  <img src="oce-logo.png" alt="Logo OCE">
+  <h1>OCE Cuci Express</h1>
+  <p>Laundry cepat, bersih, wangi & profesional sejak 2024</p>
+  <a href="#contact" class="btn">Hubungi Kami</a>
+</section>
+
+<section id="about">
+  <h2>Kenapa Pilih Kami</h2>
+  <div class="grid">
+    <div class="card">✔ Proses cepat & higienis</div>
+    <div class="card">✔ Gratis antar jemput max 3km</div>
+    <div class="card">✔ Pewangi premium & tidak merusak kain</div>
+    <div class="card">✔ Harga terjangkau & pelayanan ramah</div>
+  </div>
+
+  <h2 style="margin-top:60px">Visi</h2>
+  <p>Menjadi laundry terpercaya di Bogor dengan pelayanan cepat, bersih, dan profesional.</p>
+
+  <h2 style="margin-top:40px">Misi</h2>
+  <ul>
+    <li>• Memberikan hasil cucian terbaik</li>
+    <li>• Mengutamakan kepuasan pelanggan</li>
+    <li>• Menggunakan teknologi laundry modern</li>
+    <li>• Memberikan layanan antar jemput praktis</li>
+  </ul>
+
+  <h2 style="margin-top:40px">Motto</h2>
+  <p><b>"Cepat, Bersih, Wangi, Terpercaya"</b></p>
+</section>
+
+<section id="price">
+  <h2>Price List</h2>
+  <ul class="price">
+    <li>Cuci + Setrika start from : Rp.6000/kg</li>
+    <li>Setrika saja start from: Rp4.500/kg</li>
+    <li>Cuci Kering start from : Rp.5000/kg</li>
+    <li>Bedcover : Rp20.000 - Rp30.000</li>
+    <li>Sepatu : Rp35.000</li>
+    <li>Selimut : Rp15.000</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Kontak & Cabang</h2>
+  <p><b>Jam Operasional:</b> 08.00 - 20.00</p>
+  <br>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Cabang 1</h3>
+      <p>Cimahpar, Kec. Bogor Utara, Kota Bogor RT03/RW12</p>
+      <p>Telp: 087838088082</p>
+    </div>
+
+    <div class="card">
+      <h3>Cabang 2</h3>
+      <p>Jl. Babakan Indobaso Cimahpar, RT04/RW07, Bogor Utara</p>
+      <p>Telp: 081910141717</p>
+    </div>
+  </div>
+
+  <br><br>
+  <p><b>Customer Service:</b> 08121910768</p>
+</section>
+
+<footer>
+  <!-- Logo juga ditampilkan di bagian akhir website -->
+  <img src="oce-logo.png" alt="Logo OCE">
+  <p>© 2024 OCE Cuci Express - All Rights Reserved</p>
+</footer>
+
+<!-- Floating WhatsApp Cabang 1 -->
+<a class="float" href="https://wa.me/6287838088082" target="_blank">Chat Cabang 1</a>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  },{threshold:.15});
+  sections.forEach(sec=>observer.observe(sec));
+</script>
+
+</body>
+</html>
